@@ -22,7 +22,7 @@ const MusicContent = () => {
           title='천개의 바람이 되어.'
           description='세월호 참사로 별이 된 이들을 기리기 위해
 제작된 노래이다.'
-          youtubeId='Y5xSlNOlHL0'
+          youtubeId='-iEv-rxGrzs'
           reverse
         />
       </section>
