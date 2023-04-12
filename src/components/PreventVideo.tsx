@@ -17,7 +17,7 @@ const PreventVideo = ({ title, description, youtubeId }: Props) => {
 
       <img className='mt-8 mb-11' src='/svg/arrow-down.svg' />
 
-      <div className='h-80 w-full'>
+      <div className='h-[25rem] w-full'>
         <Video id={youtubeId} />
       </div>
     </article>
