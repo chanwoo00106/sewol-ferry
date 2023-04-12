@@ -9,7 +9,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <main className='bg-black'>{children}</main>
+      <main className='mt-20'>{children}</main>
       <footer />
     </>
   )
