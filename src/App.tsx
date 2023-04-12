@@ -1,7 +1,7 @@
 import MainLayout from './layouts/MainLayout'
-import MainVideo from './components/MainVideo'
-import MusicContent from './components/MusicContent'
-import PreventContent from './components/PreventContent'
+import MainVideo from './components/Main'
+import MusicContent from './components/Music'
+import PreventContent from './components/Prevent'
 
 function App() {
   return (
