@@ -3,7 +3,7 @@ import Music from './Music'
 const MusicContent = () => {
   return (
     <>
-      <div className='px-16 flex justify-center mb-8'>
+      <div id='song' className='px-16 flex justify-center pt-20 mb-8'>
         <h1 className='text-white text-4xl font-bold max-w-6xl w-full'>
           별이된 그들 잊지 않기 위해
           <br />

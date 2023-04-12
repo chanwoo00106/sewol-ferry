@@ -87,6 +87,10 @@
   font-family: 'Pretendard';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000;
 }

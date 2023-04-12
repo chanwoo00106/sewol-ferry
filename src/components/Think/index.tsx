@@ -1,6 +1,9 @@
 const Think = () => {
   return (
-    <section className='bg-[#232323] mt-20 mx-16 py-16 flex justify-center rounded-2xl'>
+    <section
+      id='think'
+      className='bg-[#232323] mt-20 mx-16 py-16 flex justify-center rounded-2xl'
+    >
       <article className='w-[41rem] text-white'>
         <img src='/svg/question.svg' className='mb-1' />
         <h2 className='text-xl font-semibold mb-4'>생각해 봅시다.</h2>

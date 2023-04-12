@@ -2,7 +2,10 @@ import PreventVideo from './PreventVideo'
 
 const PreventContent = () => {
   return (
-    <section className='bg-[#272727] mx-16 flex flex-col items-center py-20 px-10 rounded-3xl'>
+    <section
+      id='safty'
+      className='bg-[#272727] mx-16 flex flex-col items-center py-20 px-10 rounded-3xl'
+    >
       <img src='/svg/paper-boat.svg' />
       <p className='text-white opacity-60 font-normal text-xl mt-4'>
         앞으로 이런 일을 예방하려면
