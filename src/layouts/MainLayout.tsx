@@ -10,7 +10,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <main className='mt-20'>{children}</main>
+      <main className='mt-20 max-w-[1280px] m-auto'>{children}</main>
       <Footer />
     </>
   )
