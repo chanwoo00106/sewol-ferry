@@ -1,6 +1,10 @@
+import useQuize from './store'
 import Button from '@/components/Common/Button'
 
 const Start = () => {
+  const { setQuestion } = useQuize((state) => ({ ...state }))
+  const onClick = () => setQuestion(1)
+
   return (
     <div className='flex flex-col items-center h-full justify-center flex-1'>
       <p className='font-medium text-[#FFFFFF80] text-lg mb-10'>#세월호 퀴즈</p>
@@ -13,7 +17,9 @@ const Start = () => {
         총 5개의 문항으로 이루어져 있어요.
       </p>
 
-      <Button>시작하기</Button>
+      <Button size='big' onClick={onClick}>
+        시작하기
+      </Button>
     </div>
   )
 }
