@@ -5,13 +5,15 @@ interface Props {
   title: string
   question: number
   onClick: () => void
+  isShow: boolean
 }
 
-const QuizeTitle = ({ question, title, onClick }: Props) => {
+const QuizeTitle = ({ question, title, onClick, isShow }: Props) => {
   return (
     <>
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-lg font-semibold text-white max-w-md'>
+          {isShow && '❌ '}
           {question}.{title}
         </h3>
 

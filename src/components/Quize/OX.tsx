@@ -26,7 +26,12 @@ const OX = ({ title, question, answer, commentation }: Props) => {
 
   return (
     <div className='min-w-[38rem] flex-1 mx-auto flex flex-col mb-20'>
-      <QuizeTitle title={title} question={question} onClick={onClick} />
+      <QuizeTitle
+        isShow={isShow}
+        title={title}
+        question={question}
+        onClick={onClick}
+      />
       <div className='flex-1 flex items-center gap-4'>
         <OXButton onClick={() => setFocus('O')} focus={focus === 'O'}>
           <O color={focus === 'O' ? 'white' : undefined} />

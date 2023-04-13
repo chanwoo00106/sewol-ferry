@@ -36,7 +36,12 @@ const Select = ({
 
   return (
     <div className='min-w-[38rem] flex-1 mx-auto flex flex-col'>
-      <QuizeTitle title={title} question={question} onClick={onClick} />
+      <QuizeTitle
+        isShow={isShow}
+        title={title}
+        question={question}
+        onClick={onClick}
+      />
 
       <div className='mt-12 space-y-6 mb-20'>
         {questions.map((i, idx) => (
