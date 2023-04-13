@@ -4,6 +4,7 @@ import Start from './Start'
 import useQuize from './store'
 import Select from './Select'
 import quizeData from '@/data/quizeData.json'
+import Complete from './Complete'
 
 const Quize = () => {
   const { question, type } = useQuize((state) => ({ ...state }))
@@ -21,6 +22,7 @@ const Quize = () => {
       )}
 
       {question !== null &&
+        question <= 5 &&
         quizeData[type][question - 1].questionType === 'ox' && (
           <OX
             title={quizeData[type][question - 1].title}
@@ -31,6 +33,7 @@ const Quize = () => {
         )}
 
       {question !== null &&
+        question <= 5 &&
         quizeData[type][question - 1].questionType === 'select' && (
           <Select
             title={quizeData[type][question - 1].title}
@@ -41,6 +44,7 @@ const Quize = () => {
             commentation={quizeData[type][question - 1].commentation}
           />
         )}
+      {question !== null && question > 5 && <Complete />}
     </section>
   )
 }

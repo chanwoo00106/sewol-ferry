@@ -16,10 +16,13 @@ interface Props {
 const OX = ({ title, question, answer, commentation }: Props) => {
   const [focus, setFocus] = useState<'O' | 'X' | null>(null)
   const [isShow, setIsShow] = useState<boolean>(false)
-  const { setQuestion } = useQuize((state) => ({ ...state }))
+  const { setQuestion, setAnswerCount, answerCount } = useQuize((state) => ({
+    ...state,
+  }))
 
   const onClick = () => {
     if (focus !== answer) return setIsShow(true)
+    if (!isShow) setAnswerCount(answerCount + 1)
     setQuestion(question + 1)
     setIsShow(false)
   }

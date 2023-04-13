@@ -21,7 +21,9 @@ const Select = ({
   answer,
   commentation,
 }: Props) => {
-  const { setQuestion, reset } = useQuize((state) => ({ ...state }))
+  const { setQuestion, answerCount, setAnswerCount } = useQuize((state) => ({
+    ...state,
+  }))
   const [value, setValue] = useState<string>('')
   const [isShow, setIsShow] = useState<boolean>(false)
 
@@ -31,8 +33,8 @@ const Select = ({
 
   const onClick = () => {
     if (value !== answer) return setIsShow(true)
-    if (question >= 5) reset()
     else setQuestion(question + 1)
+    if (!isShow) setAnswerCount(answerCount + 1)
     setIsShow(false)
   }
 
