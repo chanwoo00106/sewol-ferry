@@ -10,7 +10,7 @@ const MusicContent = () => {
           우리 노래를 부른다.
         </h1>
       </div>
-      <section className="px-16 bg-[url('/svg/ribbon.svg')] bg-center bg-no-repeat h-[200vh] flex flex-col justify-evenly">
+      <section className="px-16 bg-[url('/svg/ribbon.svg')] bg-center bg-no-repeat h-[1616px] flex flex-col justify-evenly">
         <Music
           title='너를 보내고.'
           description='세월호 참사로 별이 된 아이들을 기억하기
