@@ -4,6 +4,7 @@ interface InitialType {
   type: 'sewol' | 'safty'
   question: number | null
   changeType: () => void
+  reset: () => void
   setQuestion: (question: number) => void
   setOXQuestion: (choice: boolean) => void
   setSelectQuestion: (choice: number) => void
@@ -36,6 +37,14 @@ const useQuize = create<OXQuestion | SelectQuestion>((set) => ({
     set((state) => ({
       ...state,
       question,
+    })),
+
+  reset: () =>
+    set((state) => ({
+      type: 'sewol',
+      questionType: null,
+      choice: undefined,
+      question: null,
     })),
 
   setOXQuestion: (choice: boolean) =>
