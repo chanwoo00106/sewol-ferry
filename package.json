@@ -13,7 +13,8 @@
     "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-youtube": "^10.1.0"
+    "react-youtube": "^10.1.0",
+    "zustand": "^4.3.7"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

@@ -4,6 +4,7 @@ import MusicContent from './components/Music'
 import PreventContent from './components/Prevent'
 import Think from './components/Think'
 import Info from './components/Info'
+import Quize from './components/Quize'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <MainVideo />
       <MusicContent />
       <PreventContent />
+      <Quize />
       <Think />
       <Info />
     </MainLayout>
