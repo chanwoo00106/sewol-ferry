@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-[#303030] pt-12 pl-14 pb-20 text-white bg-[url('/svg/footer-ribbon.svg')] bg-right bg-no-repeat">
+    <footer className="bg-[#303030] pt-12 pl-14 pb-20 text-white bg-[url('/svg/footer-ribbon.svg')] bg-right bg-no-repeat bg-contain">
       <h3 className='mb-3'>문의</h3>
       <div className='text-[#A4A4A4] space-y-1 mb-14 text-xs'>
         <p>우) 62423 광주광역시 광산구 상무대로 312</p>
