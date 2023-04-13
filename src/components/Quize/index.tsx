@@ -37,6 +37,7 @@ const Quize = () => {
             question={question}
             answer={quizeData[type][question - 1].answer}
             questions={quizeData[type][question - 1].questions as string[]}
+            description={quizeData[type][question - 1].description}
             commentation={quizeData[type][question - 1].commentation}
           />
         )}

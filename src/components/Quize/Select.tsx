@@ -8,6 +8,7 @@ interface Props {
   title: string
   question: number
   questions: string[]
+  description?: string
   answer: string
   commentation: string
 }
@@ -16,6 +17,7 @@ const Select = ({
   title,
   question,
   questions,
+  description,
   answer,
   commentation,
 }: Props) => {
@@ -42,6 +44,12 @@ const Select = ({
         question={question}
         onClick={onClick}
       />
+
+      {description && (
+        <p className='font-medium text-sm text-white max-w-[38rem] mt-8'>
+          {description}
+        </p>
+      )}
 
       <div className='mt-12 space-y-6 mb-20'>
         {questions.map((i, idx) => (
