@@ -17,7 +17,7 @@ const PreventContent = () => {
           <PreventVideo
             title='배에 탔을 때는 이렇게 해요~'
             description='행정 안전부에서 제작한 선박 이용시 안전
-수칙 관련련 영상입니다.'
+수칙 관련 영상입니다.'
             youtubeId='N9wSzbWX-Wg'
           />
 
