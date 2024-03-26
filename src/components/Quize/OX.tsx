@@ -15,37 +15,72 @@ interface Props {
 
 const OX = ({ title, question, answer, commentation }: Props) => {
   const [focus, setFocus] = useState<'O' | 'X' | null>(null)
-  const [isShow, setIsShow] = useState<boolean>(false)
   const { setQuestion, setAnswerCount, answerCount } = useQuize((state) => ({
     ...state,
   }))
-
+  const [isNext, setIsNext] = useState<boolean>(false)
   const onClick = () => {
-    if (focus !== answer) return setIsShow(true)
-    if (!isShow) setAnswerCount(answerCount + 1)
-    setQuestion(question + 1)
-    setIsShow(false)
+    if (!isNext) setIsNext(true)
+    else if (isNext) {
+      if (focus === answer) setAnswerCount(answerCount + 1)
+      setQuestion(question + 1)
+      setIsNext(false)
+    }
+  }
+
+  const onChange = (ox: 'O' | 'X' | null) => {
+    if (!isNext) {
+      setFocus(ox)
+      setIsNext(false)
+    }
   }
 
   return (
     <div className='min-w-[38rem] flex-1 mx-auto flex flex-col mb-20'>
       <QuizeTitle
-        isShow={isShow}
+        isNext={isNext}
+        isAnswer={focus === answer}
         title={title}
         question={question}
         onClick={onClick}
       />
       <div className='flex-1 flex items-center gap-4'>
-        <OXButton onClick={() => setFocus('O')} focus={focus === 'O'}>
-          <O color={focus === 'O' ? 'white' : undefined} />
+        <OXButton
+          onClick={() => onChange('O')}
+          focus={focus === 'O'}
+          isAnswer={'O' === answer}
+          isNext={isNext}
+        >
+          <O
+            color={
+              focus === 'O' && !isNext
+                ? 'white'
+                : isNext && 'O' !== answer
+                ? '#898989'
+                : undefined
+            }
+          />
         </OXButton>
 
-        <OXButton onClick={() => setFocus('X')} focus={focus === 'X'}>
-          <X color={focus === 'X' ? 'white' : undefined} />
+        <OXButton
+          onClick={() => onChange('X')}
+          focus={focus === 'X'}
+          isAnswer={'X' === answer}
+          isNext={isNext}
+        >
+          <X
+            color={
+              focus === 'X' && !isNext
+                ? 'white'
+                : isNext && 'X' !== answer
+                ? '#898989'
+                : undefined
+            }
+          />
         </OXButton>
       </div>
 
-      <Commentation isShow={isShow} text={commentation} />
+      <Commentation isNext={isNext} text={commentation} />
     </div>
   )
 }

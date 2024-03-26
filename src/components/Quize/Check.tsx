@@ -3,20 +3,16 @@ interface Props {
   idx: number
   checked: boolean
   onClick: () => void
+  isNext: boolean
 }
 
-const Check = ({ idx, problem, checked, onClick }: Props) => {
+const Check = ({ idx, problem, checked, onClick, isNext }: Props) => {
   return (
     <div
       className='flex gap-3 text-white font-medium text-sm cursor-pointer'
       onClick={onClick}
     >
-      <input
-        className='cursor-pointer'
-        type='checkbox'
-        readOnly
-        checked={checked}
-      />
+      <img src={`/svg/${checked ? isNext ? 'unabled' : 'checked' : 'unchecked'}-box.svg`}/>
       <h3>
         {idx}. {problem}
       </h3>

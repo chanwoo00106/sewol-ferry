@@ -1,10 +1,10 @@
 interface Props {
   text: string
-  isShow: boolean
+  isNext: boolean
 }
 
-const Commentation = ({ text, isShow }: Props) => {
-  if (!isShow) return null
+const Commentation = ({ text, isNext }: Props) => {
+  if (!isNext) return null
 
   return (
     <p className='text-sm font-normal text-white text-center max-w-[38rem]'>
