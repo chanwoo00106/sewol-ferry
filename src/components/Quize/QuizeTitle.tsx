@@ -16,7 +16,7 @@ const QuizeTitle = ({ question, title, onClick, isAnswer, isNext }: Props) => {
         <h3 className='text-lg font-semibold text-white max-w-md'>
           {isNext && isAnswer && '⭕️ '}
           {isNext && !isAnswer && '❌ '}
-          {question}.{title}
+          {question}. {title}
         </h3>
         <div className='space-x-5'>
           <span className='text-white font-medium text-base'>

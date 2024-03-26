@@ -12,7 +12,11 @@ const Check = ({ idx, problem, checked, onClick, isNext }: Props) => {
       className='flex gap-3 text-white font-medium text-sm cursor-pointer'
       onClick={onClick}
     >
-      <img src={`/svg/${checked ? isNext ? 'unabled' : 'checked' : 'unchecked'}-box.svg`}/>
+      <input
+        type='checkbox'
+        className={`w-[16px] h-[16px] rounded-md border-none cursor-pointer bg-[${isNext ? 'red' : '#bd8'}] appearance-none mt-[2px]`}
+      checked={checked}
+      />
       <h3>
         {idx}. {problem}
       </h3>

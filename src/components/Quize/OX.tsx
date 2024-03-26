@@ -48,7 +48,6 @@ const OX = ({ title, question, answer, commentation }: Props) => {
         <OXButton onClick={() => onChange('O')} focus={focus === 'O'}>
           <O color={focus === 'O' ? 'white' : undefined} />
         </OXButton>
-
         <OXButton onClick={() => onChange('X')} focus={focus === 'X'}>
           <X color={focus === 'X' ? 'white' : undefined} />
         </OXButton>
