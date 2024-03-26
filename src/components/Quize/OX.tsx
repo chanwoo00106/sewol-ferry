@@ -29,7 +29,7 @@ const OX = ({ title, question, answer, commentation }: Props) => {
   }
 
   const onChange = (ox: 'O' | 'X' | null) => {
-    if (!isNext) {
+    if(!isNext) {
       setFocus(ox)
       setIsNext(false)
     }
@@ -45,38 +45,12 @@ const OX = ({ title, question, answer, commentation }: Props) => {
         onClick={onClick}
       />
       <div className='flex-1 flex items-center gap-4'>
-        <OXButton
-          onClick={() => onChange('O')}
-          focus={focus === 'O'}
-          isAnswer={'O' === answer}
-          isNext={isNext}
-        >
-          <O
-            color={
-              focus === 'O' && !isNext
-                ? 'white'
-                : isNext && 'O' !== answer
-                ? '#898989'
-                : undefined
-            }
-          />
+        <OXButton onClick={() => onChange('O')} focus={focus === 'O'}>
+          <O color={focus === 'O' ? 'white' : undefined} />
         </OXButton>
 
-        <OXButton
-          onClick={() => onChange('X')}
-          focus={focus === 'X'}
-          isAnswer={'X' === answer}
-          isNext={isNext}
-        >
-          <X
-            color={
-              focus === 'X' && !isNext
-                ? 'white'
-                : isNext && 'X' !== answer
-                ? '#898989'
-                : undefined
-            }
-          />
+        <OXButton onClick={() => onChange('X')} focus={focus === 'X'}>
+          <X color={focus === 'X' ? 'white' : undefined} />
         </OXButton>
       </div>
 
