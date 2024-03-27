@@ -67,7 +67,6 @@ const Select = ({
             checked={value === i}
             onClick={() => onSelect(i)}
             idx={idx + 1}
-            isNext={isNext}
           />
         ))}
       </div>

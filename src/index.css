@@ -94,31 +94,3 @@ html {
 body {
   background: #000;
 }
-
-input[type='checkbox'] {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  position: relative;
-  cursor: pointer;
-}
-
-input[type='checkbox']:not(:checked) {
-  background-color: #5a5a5a;
-}
-
-input[type='checkbox']:checked {
-  background-color: #FDCF00;
-}
-
-input[type='checkbox']:checked::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 10px;
-  top: 1px;
-  left: 5px;
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}

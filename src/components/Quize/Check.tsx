@@ -1,3 +1,5 @@
+import CheckBox from "./CheckBox"
+
 interface Props {
   problem: string
   idx: number
@@ -11,7 +13,7 @@ const Check = ({ idx, problem, checked, onClick }: Props) => {
       className='flex gap-3 text-white font-medium text-sm cursor-pointer'
       onClick={onClick}
     >
-      <input type='checkbox' checked={checked} />
+      <CheckBox checked={checked} />
       <h3>
         {idx}. {problem}
       </h3>
