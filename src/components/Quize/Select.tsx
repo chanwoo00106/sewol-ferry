@@ -25,26 +25,32 @@ const Select = ({
     ...state,
   }))
   const [value, setValue] = useState<string>('')
-  const [isShow, setIsShow] = useState<boolean>(false)
-
-  const onSelect = (value: string) => {
-    setValue(value)
-  }
+  const [isNext, setIsNext] = useState<boolean>(false)
 
   const onClick = () => {
-    if (value !== answer) return setIsShow(true)
-    else setQuestion(question + 1)
-    if (!isShow) setAnswerCount(answerCount + 1)
-    setIsShow(false)
+    if (!isNext) setIsNext(true)
+    else if (isNext) {
+      if (value === answer) setAnswerCount(answerCount + 1)
+      setQuestion(question + 1)
+      setIsNext(false)
+    }
+  }
+
+  const onSelect = (value: string) => {
+    if (!isNext) {
+      setValue(value)
+      setIsNext(false)
+    }
   }
 
   return (
     <div className='min-w-[38rem] flex-1 mx-auto flex flex-col'>
       <QuizeTitle
-        isShow={isShow}
         title={title}
         question={question}
         onClick={onClick}
+        isAnswer={value === answer}
+        isNext={isNext}
       />
 
       {description && (
@@ -65,7 +71,7 @@ const Select = ({
         ))}
       </div>
 
-      <Commentation isShow={isShow} text={commentation} />
+      <Commentation isNext={isNext} text={commentation} />
     </div>
   )
 }
